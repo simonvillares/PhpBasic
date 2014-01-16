@@ -26,6 +26,12 @@
         $saludo_total .= $DESTINO;
         $saludo_total .= "!";
         echo $saludo_total;
+        //numeros
+        $valor1 =10;
+        $valor2 = 20;
+        $suma = $valor1 + $valor2;
+        echo "<br>";
+        echo "La suma es".$suma
         ?>
     </body>
 </html>
