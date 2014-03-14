@@ -5,7 +5,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//Definir constantes
 define('LOGIN_MIN', 3); 
 define('LOGIN_MAX', 10); 
 define('PASS_MIN', 5); 
@@ -52,12 +51,9 @@ function validarPassword($password) {
 
 /**
  * validarEmail
- * Debe contener solo un conjunto determinado de caracteres(patrón)
  * @param email
- * @return bool
+ * @return bool 
  */
-function validarEmail ($email){
-    return filter_var($email, FILTER_VALIDATE_EMAIL);
+function validarEmail($email) {
+    return (filter_var($email,FILTER_VALIDATE_EMAIL ));
 }
-
-

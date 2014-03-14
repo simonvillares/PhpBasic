@@ -82,14 +82,4 @@ function validarNombreEstricto($valor) {
         return false;
     }
 }
-/**
- * Funcion para check de Solicita beca
- * @param type $valor
- */
-function resultadoCheck($valor){
-    if(isset($valor)){
-        return $valor;
-    }else {
-        return false;
-    }
-}
+

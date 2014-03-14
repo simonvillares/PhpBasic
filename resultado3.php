@@ -1,4 +1,4 @@
-<<?php require_once 'validar.php'; ?>
+<?php require_once 'validar.php'; ?>
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -10,12 +10,12 @@
         <?php
             //Entrada datos       
             $nombre = $_REQUEST['nombre'];
-            $edad = $_REQUEST['edad'];
+            $edad = $_REQUEST['edad'];     
             $beca = isset($_REQUEST['beca']);
             $sexo = (isset($_REQUEST['sexo']))?$_REQUEST['sexo']:false;
             $estado = (isset($_REQUEST['estado']))?$_REQUEST['estado']:false;
             $aficiones = (isset($_REQUEST['aficiones']))?$_REQUEST['aficiones']:false;
-       //Validar Datos
+            //Validar datos
             $error = false;
             $mensaje_error = "ERROR: ";
             //Validar nombre
@@ -29,40 +29,42 @@
                 $error = true;
                 $mensaje_error .= "Edad debe ser un número...<br>";
             } 
-            //Validar sexo
             if (!($sexo)) {
                 $error = true;
-                $mensaje_error .= "Sexo no elegido<br>";
+                $mensaje_error .= "Sexo no elegido ...<br>";
             }
-             //Validar estado
             if (!($estado)) {
                 $error = true;
-                $mensaje_error .= "Estado civil no elegido<br>";
+                $mensaje_error .= "Estado cicvil no elegido ...<br>";
             }
-            //Validar aficiones
             if (!($aficiones)) {
                 $error = true;
-                $mensaje_error .= "Aficiones no elegidas<br>";
-            }
-            
+                $mensaje_error .= "Debe elegir alguna afición ...<br>";
+            }            
             //Cálculo y Salida
             if (!$error) {
                 // Si no hay error
                 if ($edad>=18) {
-                    echo $nombre." es Mayor de Edad <br>";
+                    echo $nombre." es Mayor de Edad<br>";
                 } else {    
-                    echo $nombre." es Menor de edad <br>";
+                    echo $nombre." es Menor de edad<br>";
                 }
-                if ($beca){
-                    echo " Solicita beca <br>";
-                }else{
-                    echo " No solicita beca <br>";
+                if ($beca) {
+                    echo "Solicita beca";
+                } else {
+                    echo "No solicita beca";
                 }
-                    echo " sexo = ".$sexo."</br>";
-                    echo " Estado civil = ".$estado."</br>";
-                    echo " Aficiones elegidas";
-                    
-                    
+                echo "Sexo = ".$sexo."<br>";
+                echo "Estado Civil =".$estado."<br>";
+                echo "Aficciones Elegidas<br>";
+                for($i=0; $i<count($aficiones); $i++) {
+                    print_r($aficiones[$i]);
+                    echo '<br>';
+                }
+                foreach ($aficiones as $aficion) {
+                    echo ($aficion);
+                    echo '<br>';
+                }
             } else {
                 // Si hay error
                 echo $mensaje_error;
@@ -71,3 +73,4 @@
         ?>
     </body>
 </html>
+

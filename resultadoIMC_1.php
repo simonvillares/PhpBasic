@@ -6,36 +6,32 @@
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>resultado IMC</div>
+        <div>Resultado IMC</div>
         <?php
-        //Prueba inicial
-            //print_r($_REQUEST);
-       //Entrada datos 
             $masa = $_REQUEST['masa'];
             $estatura = $_REQUEST['estatura'];
-            //Tratamiento de errores para peso y estatura.
-            $errores = array(); 
-            if (!validarPeso ($masa)) {
+            $errores = array();
+            if (!validarPeso($masa)) {
                 $errores[] = MSG_ERR_PESO;
             }
-            if (!validarEstatura ($estatura)) {
+             if (!validarPeso($estatura)) {
                 $errores[] = MSG_ERR_ESTATURA;
             }
-            if (count($errores)>0){
+            if (count($errores)>0) {
                 echo "Errores<br>";
-                foreach ($errores as $error){
-                    echo $error."</br>";
+                foreach($errores as $error) {
+                    echo $error.'<br>';
                 }
-            }else{
-                 //Cálculo 
-                       $imc = calculoIMC($masa, $estatura);
-                      $clasificación = clasificacionIMC($imc);
-            
-                //presentacion
-                     echo "IMC = ".$imc;
-                      echo "<br>";
-                     echo "Clasificación = ".clasificacionIMC($imc);
+            } else {
+                //Cálculo
+                $imc = calculoIMC($masa, $estatura);
+                $clasificacion = clasificacionIMC($imc);
+                //presentación
+                echo "IMC = ".$imc;
+                echo "<br>";
+                echo "Clasificación = ".$clasificacion;
             }
         ?>
     </body>
 </html>
+

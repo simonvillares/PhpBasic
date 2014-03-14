@@ -6,16 +6,21 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Cálculo IMC</title>
+        <title>Registro</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>Cálculo IMC</div>
-        <form action="resultadoIMC_1.php" method="GET">
-            <p>Peso: <input type="text" name="masa" /> Kgs</p>
-            <p>Estatura <input type="text" name="estatura" /> Cms</p>
+        <div>Registro</div>
+        <form action="resultado_registro.php" method="GET">
+            <p>Login: <input type="text" name="login"> </p>    
+            <p>Password <input type="password" name="password"/></p>
+            <p>Re-Password <input type="password" name="passwordr"/></p>
+            <p>Email <input type="text" name="email"/></p>
             <p><input type="submit" value="Enviar" /></p>
         </form>
     </body>
 </html>
+
+
+

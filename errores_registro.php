@@ -6,10 +6,10 @@
  * and open the template in the editor.
  */
 
-//constantes
-define('MSG_ERR_LOGIN', "Login incorrecto");
-define('MSG_ERR_PASSWORD' , "Password incorrecto");
-define('MSG_ERR_PASSWORD2', "Los Password no coinciden");
-define('MSG_ERR_EMAIL', "Email incorrecto");
+define('MSG_ERR_LOGIN', "Login incorrecto ...");
+define('MSG_ERR_PASSWORD', "Password incorrecto ...");
+define('MSG_ERR_PASSWORDR', "Los Password no coinciden ...");
+define('MSG_ERR_EMAIL', "Email incorrecto ...");
+
 
 ?>
